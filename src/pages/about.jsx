@@ -10,10 +10,7 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>Junichi Mukai&apos;s Portfolio</title>
-        <meta name="description" content="Junichi Mukai's Portfolio" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <title>About | Junichi Mukai&apos;s Portfolio</title>
       </Head>
 
       <Header />

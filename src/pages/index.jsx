@@ -11,13 +11,9 @@ export default function Home() {
     <>
       <Head>
         <title>Junichi Mukai&apos;s Portfolio</title>
-        <meta name="description" content="Junichi Mukai's Portfolio" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Header />
-      {/* <Main title="Junichi Mukai's Portfolio" /> */}
       <section id="home" className="text-gray-700">
         <div className="container mx-auto flex flex-col items-center py-20 px-5 md:flex-row">
           <div className="mb-16 flex-grow text-center md:w-1/2 md:pr-16 md:text-left lg:pr-24">
