@@ -1,10 +1,9 @@
 import Image from "next/image";
 
-const Main = ({ title }) => {
+const Main = () => {
   return (
     <>
-      <main className={styles.main}>
-        <h1>{title}</h1>
+      <main className="flex flex-col justify-between items-center p-24 min-h-screen">
       </main>
     </>
   );
