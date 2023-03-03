@@ -1,14 +1,14 @@
-import Image from "next/image";
-import styles from "@/styles/Home.module.css";
 import Link from "next/link";
+import Image from "next/image";
+import styles from "./Header.module.scss";
 
 const Header = () => {
   return (
-    <header>
+    <header className={styles.header}>
       <div>
         <Link href="/">Junichi Mukai</Link>
       </div>
-      
+
       <nav>
         <ul>
           <li>
