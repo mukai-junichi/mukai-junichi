@@ -1,7 +1,7 @@
 import Image from "next/image";
-import styles from "@/styles/Home.module.scss";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import styles from "./Main.module.scss";
+import Header from "./Header";
+import Footer from "./Footer";
 
 const Main = ({ title }) => {
   return (
