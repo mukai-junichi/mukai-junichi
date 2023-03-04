@@ -1,10 +1,8 @@
 import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.scss";
 import Header from "../components/Header";
 import Main from "../components/Main";
 import Footer from "../components/Footer";
+import AboutContent from "../components/contents/AboutContent";
 
 export default function About() {
   return (
@@ -14,9 +12,9 @@ export default function About() {
       </Head>
 
       <Header />
-      <Main
-        title="About me"
-      />
+      <Main>
+        <AboutContent />
+      </Main>
       <Footer />
     </>
   );

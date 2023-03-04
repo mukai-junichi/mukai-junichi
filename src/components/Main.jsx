@@ -1,11 +1,8 @@
-import Image from "next/image";
-
-const Main = () => {
+const Main = ({children}) => {
   return (
-    <>
-      <main className="flex flex-col justify-between items-center p-24 min-h-screen">
-      </main>
-    </>
+    <main className="container mx-auto flex flex-col md:flex-row items-center py-40 md:py-1 px-5 min-h-screen ">
+      {children}
+    </main>
   );
 };
 

@@ -1,10 +1,8 @@
 import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.scss";
 import Header from "../components/Header";
 import Main from "../components/Main";
 import Footer from "../components/Footer";
+import WorksContent from "../components/contents/WorksContent";
 
 export default function Works() {
   return (
@@ -14,9 +12,9 @@ export default function Works() {
       </Head>
 
       <Header />
-      <Main
-        title="Works"
-      />
+      <Main>
+        <WorksContent />
+      </Main>
       <Footer />
     </>
   );

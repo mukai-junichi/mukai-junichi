@@ -1,5 +1,6 @@
 import "@/styles/globals.scss";
 import Head from "next/head";
+import { Inter } from "next/font/google";
 
 export default function App({ Component, pageProps }) {
   return (
