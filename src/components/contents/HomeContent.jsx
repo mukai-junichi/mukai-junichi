@@ -1,13 +1,11 @@
 const HomeContent = () => {
   return (
     <>
-      <div className="mb-16 flex-grow text-center md:w-1/2 md:pr-16 md:text-left lg:pr-24">
-        <h1 className="mb-4 text-3xl font-medium text-gray-900 sm:text-6xl">
+      <div className="mb-16 flex-grow text-center md:my-16 md:w-1/2 md:pt-8 md:text-left lg:px-12">
+        <h1 className="mb-4 text-3xl font-medium text-gray-900 sm:text-5xl">
           Hi!
           <br />
           I'm Web Developer.
-          <br />
-          Web Developer
         </h1>
         <p className="mb-8 leading-relaxed">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam beatae
