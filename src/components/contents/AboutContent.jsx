@@ -75,6 +75,10 @@ const AboutContent = () => {
         </section>
 
         <Timeline />
+
+        <p className="mb-12 text-center text-xl font-medium">
+            開発スキル向上のため、日々奮闘中
+        </p>
       </div>
     </>
   );
