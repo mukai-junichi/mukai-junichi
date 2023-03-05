@@ -1,19 +1,30 @@
 .timeline {
   position: relative;
   margin: 3em auto;
-  overflow: auto;
 
   &:before {
     position: absolute;
     left: 50%;
+    transform: translate(-50%, 0);
     width: 5px;
     height: 100%;
     content: '';
     background: #EF6C00;
+  }
 
-    @media screen and (max-width: 767px) {
-      left: 0;
-    }
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: #EF6C00 transparent transparent transparent;
+    display: inline-block;
+    width: 0;
+    height: 0;
+
   }
 
   &__headline {
@@ -30,7 +41,6 @@
     @media screen and (max-width: 767px) {
       width: 50%;
       max-width: none;
-      margin: 1em 2em;
     }
   }
 
@@ -43,8 +53,9 @@
     flex-direction: column;
 
     @media screen and (max-width: 767px) {
-      z-index: 1;
+      max-width: 100%;
       padding: 0 1.5em;
+      z-index: 1;
     }
   }
 

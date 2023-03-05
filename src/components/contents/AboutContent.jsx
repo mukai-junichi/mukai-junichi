@@ -34,7 +34,7 @@ const Histories = [
 const AboutContent = () => {
   return (
     <>
-      <div className="mb-16 flex-grow text-center md:my-16 md:w-1/2 md:pt-8 md:text-left lg:px-12">
+      <div className="flex-grow text-center md:w-1/2 md:text-left lg:px-12">
         <h1 className="sm:3xl my-8 text-center text-2xl font-medium text-gray-900">
           About me
         </h1>

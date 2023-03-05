@@ -8,7 +8,7 @@ const View = ({ children }) => {
       <Header />
       <Main>
         {children}
-      </Main>
+        </Main>
       <Footer />
     </>
   );
