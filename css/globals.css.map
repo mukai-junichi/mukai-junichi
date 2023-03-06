@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/styles/globals.scss","globals.css"],"names":[],"mappings":"AAKQ,8GAAA;AACA,kFAAA;AALR,cAAA;AACA,oBAAA;AACA,mBAAA;AAqFA;EACE,sBAAA;EACA,UAAA;EACA,SAAA;AClFF;;ADqFA;;EAEE,gBAAA;AClFF;;ADsFA;EACE,iCAAA;EACA,oHAAA;ACnFF;;AD2FA;EACE,cAAA;EACA,qBAAA;ACxFF;;AD2FA;EACE;IACE,kBAAA;ECxFF;AACF","file":"globals.css"}
