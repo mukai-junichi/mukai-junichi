@@ -16,6 +16,8 @@ const Modal = (props) => {
   };
   useEffect(stopScrollingBackContent, [props.showFlag]);
 
+  const DevLanguage = props.dev_language;
+
   return (
     <>
       {props.showFlag ? (
@@ -26,13 +28,13 @@ const Modal = (props) => {
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="relative flex h-4/5 w-2/3 flex-row items-center gap-4 rounded bg-white p-3"
+            className="relative flex h-4/5 w-2/3 flex-col md:flex-row items-center gap-4 rounded bg-white p-3"
             id="modalContent"
           >
-            <div className="h-full w-1/2 overflow-y-scroll p-3">
+            <div className="h-full md:w-1/2 overflow-y-scroll p-3">
               <img className="h-auto object-cover" src={props.site_img} />
             </div>
-            <div className="h-full w-1/2 overflow-y-scroll p-3">
+            <div className="h-full md:w-1/2 overflow-y-scroll p-3">
               <span className="rounded-lg bg-teal-300 py-1 px-2 text-sm">
                 タイトル ( URL )
               </span>
@@ -55,7 +57,11 @@ const Modal = (props) => {
               <span className="rounded-lg bg-teal-300 py-1 px-2 text-sm">
                 開発言語
               </span>
-              <p className="my-2 ml-2 text-sm leading-relaxed">{props.dev_language}</p>
+              {DevLanguage.map((language) => {
+                return (
+                  <p key={language} className="my-2 ml-2 text-sm leading-relaxed">{language}</p>
+                );
+              })}
               <span className="rounded-lg bg-teal-300 py-1 px-2 text-sm">
                 実装について
               </span>
@@ -66,7 +72,7 @@ const Modal = (props) => {
               <p className="my-2 ml-2 text-sm leading-relaxed">{props.purpose}</p>
             </div>
 
-            <button onClick={closeModal} className="absolute top-3 right-3">
+            <span onClick={closeModal} className="absolute top-1 right-1">
               <svg
                 width="24"
                 height="24"
@@ -79,7 +85,7 @@ const Modal = (props) => {
                   fill="currentColor"
                 />
               </svg>
-            </button>
+            </span>
           </div>
         </div>
       ) : (
