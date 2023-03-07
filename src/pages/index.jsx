@@ -34,9 +34,9 @@ export default function Home() {
                   </span>
                 </div>
               </h1>
-              <button className="mx-auto my-0 mb-8 w-fit rounded border-0 bg-teal-500 py-2 px-6 text-lg text-white drop-shadow duration-300 hover:bg-teal-600 md:my-8 md:mb-0">
+              {/* <button className="mx-auto my-0 mb-8 w-fit rounded border-0 bg-teal-500 py-2 px-6 text-lg text-white drop-shadow duration-300 hover:bg-teal-600 md:my-8 md:mb-0">
                 Contact
-              </button>
+              </button> */}
             </div>
 
             <div className="flex flex-col items-center  lg:max-w-lg">
