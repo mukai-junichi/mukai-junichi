@@ -22,7 +22,7 @@ export default function Home() {
         <>
           <div className="my-12 flex flex-col items-center justify-center md:flex-row">
             <div className="flex flex-col px-4 md:mr-32 lg:max-w-lg">
-              <h1 className="mb-4 text-center text-3xl font-medium text-gray-900 sm:text-5xl">
+              <h1 className="mb-4 whitespace-nowrap text-center text-3xl font-medium text-gray-900 sm:text-5xl">
                 I'm Junichi Mukai
                 <div className="my-4 flex flex-col items-center justify-center md:mt-8">
                   <span className="w-fit bg-gradient-to-r from-violet-800 via-blue-500 to-indigo-600 bg-clip-text py-2 text-transparent">
@@ -34,7 +34,7 @@ export default function Home() {
                   </span>
                 </div>
               </h1>
-              <button className="mx-auto my-0 mb-8 w-fit rounded border-0 bg-teal-500 py-2 px-6 text-lg text-white duration-300 hover:bg-teal-600 md:my-8 md:mb-0">
+              <button className="mx-auto my-0 mb-8 w-fit rounded border-0 bg-teal-500 py-2 px-6 text-lg text-white drop-shadow duration-300 hover:bg-teal-600 md:my-8 md:mb-0">
                 Contact
               </button>
             </div>
