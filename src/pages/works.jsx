@@ -12,12 +12,15 @@ const WorkItems = [
     title: "ポートフォリオサイト",
     img: "img/works_portfolio.png",
     introduction: "今ご覧いただいている、当サイトです",
-    site_description: "自分自身の紹介サイトです。経歴、制作物、スキルについて記載しています。",
+    site_description:
+      "自分自身の紹介サイトです。経歴、制作物、スキルについて記載しています。",
     site_img: "img/works_portfolio_overall.png",
     site_url: "https://mukai-junichi.vercel.app/",
     dev_language: ["React", "Next.js", "tailwindcss"],
-    dev_description: "React学習と並行して自身のポートフォリオサイトを作成しました。Next.jsを使用しており、各ページのルーティングはNext.jsで出しわけを行なっています。Worksページで使用しているモーダルは、Hooksの勉強のためuseStateとuseEffectを使用し自作しました。",
-    purpose: "Hooksについて、CSRやSSR等のレンダリングのタイミングやそれによるSEOの観点での影響等について等、継続して学習を行い、理解を深めていきたいと思っています。",
+    dev_description:
+      "React学習と並行して自身のポートフォリオサイトを作成しました。Next.jsを使用しており、各ページのルーティングはNext.jsで出しわけを行なっています。Worksページで使用しているモーダルは、Hooksの勉強のためuseStateとuseEffectを使用し自作しました。",
+    purpose:
+      "Hooksについて、CSRやSSR等のレンダリングのタイミングやそれによるSEOの観点での影響等について等、継続して学習を行い、理解を深めていきたいと思っています。",
     modal: true,
   },
   {
@@ -25,12 +28,15 @@ const WorkItems = [
     title: "MJ-Lab",
     img: "img/works_mj-lab.png",
     introduction: "個人運営しているサイトです",
-    site_description: "Web制作、グラフィックデザイン、動画制作、オンライン学習サポート等を個人活動で行なっていきたいと思い制作したサイトです。動画製作以外のページはまだ制作途中です。",
+    site_description:
+      "Web制作、グラフィックデザイン、動画制作、オンライン学習サポート等を個人活動で行なっていきたいと思い制作したサイトです。動画製作以外のページはまだ制作途中です。",
     site_img: "img/works_mj-lab_overall.png",
     site_url: "https://mj-lab.com/",
     dev_language: ["WordPress", "PHP", "HTML", "CSS(Sass)", "Jquery"],
-    dev_description: "テーマはWordPressで自作しています。PHPは実務経験もあるため比較的楽にと進めることができましたが、WordPressは触ったことがなかったため、仕組みの理解から進めているところです。TOPページは背景に動画を使用し、パララックスにしています。ヘッダーやレスポンシブのハンバーガーメニュー、各コンテンツの動きは、CSSのアニメーションとjQueryを使用して実装しています。",
-    purpose: "Hooksについて、CSRやSSR等のレンダリングのタイミングやそれによるSEOの観点での影響等について等、継続して学習を行い、理解を深めていきたいと思っています。",
+    dev_description:
+      "テーマはWordPressで自作しています。WordPressの知見がなかったため、自己学習で仕組み理解から始め制作を進めているところです。TOPページは背景に動画を使用し、パララックスにしています。ヘッダーやレスポンシブのハンバーガーメニュー、各コンテンツの動きは、CSSアニメーションとjQueryを使用して実装しています。",
+    purpose:
+      "未完成のページを完成させたら、その後は決済機能を実装したいと思っています。現状はStripeを使用予定です。また、WordPressのメイン機能のブログ機能についても今後学習を進め、アウトプットとしてサブドメインを取得してブログサイトの制作も行いたいと考えています。ブログでWeb制作、デザイン制作、動画製作についての記事を書き、学習用教材としてオンラインでの学習サポートに活用したいと考えています。",
     modal: true,
   },
   {
@@ -91,7 +97,7 @@ export default function Works() {
                           WorkItem.modal ? "bg-white" : "bg-slate-200"
                         }`}
                       >
-                        <div className="mx-2 block border-b-2 border-dashed border-slate-400 px-2 pb-2 font-bold">
+                        <div className="mx-2 block border-b-2 border-dashed border-slate-400 px-2 pb-2 text-center font-bold">
                           <span
                             onClick={ShowModal}
                             className={`${

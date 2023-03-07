@@ -32,11 +32,11 @@ const Timeline = () => {
             【起業・経営】前職の同僚と会社を設立
           </p>
           <p className={styles.timeline__description}>
-            Webサービスに詳しい知人にコンサルティングを受け、ポイントサイトメディアを立ち上げ運営を行う。
+            知人にコンサルティングを受け、ポイントサイトメディアを立ち上げ運営を行う。
             <br></br>
-            アクセス集計や分析、企画に使用するためのバナー制作から、経理や事務業務のための簿記・ファイナンシャルの知識を習得。
+            アクセス集計・分析、企画・運営、サイトのバナー制作、経理・事務業務等、経営を経験し必要知識を習得。
             <br></br>
-            運営を続けるも業績が安定せず、30歳の時に結婚、妊娠等を機に会社員としての転職を決意。
+            運営を続けるも業績が安定せず、30歳の時に会社員としての転職を決意。
           </p>
         </li>
       </ul>
@@ -48,9 +48,11 @@ const Timeline = () => {
             【営業・部門管理】会社員として転職
           </p>
           <p className={styles.timeline__description}>
-            医療・福祉業界への人材事業及び教育事業を行なっている会社に入社。
+            医療・福祉業界特化型の人材派遣・紹介業及び教育事業を行なっている会社に入社。
             <br></br>
-            東京本社の福祉人材部門の営業職として従事し、部門管理業務、責任者業務、ビジネスモデルの再構築、社内の基盤システムの構築等にも携わる。
+            東京本社の福祉人材部門に配属となり営業職として従事。
+            <br></br>
+            その後、部門管理・運営、新規事業の考案・既存事業のビジネスモデルの見直し、社内の基盤システムの構築等にも携わる。
             <br></br>
             業務の中で課題解決のためにシステムが必要不可欠で、それを自身で作れる人材になりたいと強く思うようになり、エンジニア転職へのチャレンジを決意。
           </p>
@@ -58,23 +60,23 @@ const Timeline = () => {
         <li className={styles.timeline__episodes}>
           <p className={styles.timeline__data}>2020年10月~2020年12月</p>
           <p className={styles.timeline__title}>
-            短期プログラミングスクールで学習
+            【学習】短期プログラミングスクールで学習
           </p>
           <p className={styles.timeline__description}>
             退職し、エンジニア転職するためにプログラミングスクールで学習を開始。
             <br></br>
-            Ruby（Ruby on Rails）を短期集中型で学習し卒業。
+            約3ヶ月間の短期集中型でHTML・CSS・JavaScript・Ruby（Ruby on Rails）等を学習。
           </p>
         </li>
         <li className={styles.timeline__episodes}>
           <p className={styles.timeline__data}>35歳~37歳（2021年 - 2022年）</p>
           <p className={styles.timeline__title}>
-            エンジニアとして転職（バックエンドがメイン）
+            【エンジニア】スクールでの学習を終えバックエンドエンジニアとして転職（フロントも一部対応）
           </p>
           <p className={styles.timeline__description}>
             海外ユーザ向けの日本のアニメ情報サイトの開発、保守運営業務に従事。
             <br></br>■ 開発言語<br></br>
-            PHP/Symfony, HTML/CSS/SASS, Javascript/jQuery, SQL/MySQL<br></br>■
+            PHP/Symfony, SQL/MySQL, HTML/CSS/SASS, Javascript/jQuery<br></br>■
             インフラ・その他<br></br>
             AWS, GA4/GTM, GitHub, Slack, MacPC
           </p>
@@ -88,7 +90,6 @@ const Timeline = () => {
             エンジニアとしての開発スキルを高めたく、ステップアップ転職。
             <br></br>
             教育機関や一般企業向けに、eラーニングプラットフォームの構築、保守運用のサービス提供している会社にてPMとして従事。
-            <br></br>
           </p>
         </li>
       </ul>

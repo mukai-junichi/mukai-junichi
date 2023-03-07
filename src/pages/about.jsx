@@ -56,7 +56,7 @@ export default function About() {
             </h1>
             <div className="mb-10">
               <h2 className="mb-12 text-center text-xl font-medium">
-                35歳からエンジニア職に転向した<br></br>遅咲きエンジニアです
+                35歳からエンジニアに転向した<br></br>遅咲きエンジニアです
               </h2>
               <div className="mx-auto flex w-fit flex-col">
                 {Histories.map((History) => {

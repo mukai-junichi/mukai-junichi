@@ -28,18 +28,19 @@ const Modal = (props) => {
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="relative flex h-4/5 w-2/3 flex-col md:flex-row items-center gap-4 rounded bg-white p-3"
+            className="relative flex h-4/5 w-4/5 flex-col items-center gap-4 rounded bg-white p-3 md:flex-row"
             id="modalContent"
           >
-            <div className="h-full md:w-1/2 overflow-y-scroll p-3">
+            <div className="h-full overflow-y-scroll p-3 md:w-1/2">
               <img className="h-auto object-cover" src={props.site_img} />
             </div>
-            <div className="h-full md:w-1/2 overflow-y-scroll p-3">
+            <div className="h-full overflow-y-scroll p-3 md:w-1/2">
               <span className="rounded-lg bg-teal-300 py-1 px-2 text-sm">
-                タイトル ( URL )
+                タイトル / URL
               </span>
               <p className="my-2 ml-2 text-sm leading-relaxed">
-                {props.title} (
+                {props.title}
+                <br></br>
                 <a
                   className="text-blue-500"
                   href="https://mj-lab.com/"
@@ -47,29 +48,39 @@ const Modal = (props) => {
                 >
                   {props.site_url}
                 </a>
-                )
               </p>
               <span className="rounded-lg bg-teal-300 py-1 px-2 text-sm">
                 説明
               </span>
-              <p className="my-2 ml-2 text-sm leading-relaxed">{props.site_description}</p>
+              <p className="my-2 ml-2 text-sm leading-relaxed">
+                {props.site_description}
+              </p>
 
               <span className="rounded-lg bg-teal-300 py-1 px-2 text-sm">
                 開発言語
               </span>
               {DevLanguage.map((language) => {
                 return (
-                  <p key={language} className="my-2 ml-2 text-sm leading-relaxed">{language}</p>
+                  <p
+                    key={language}
+                    className="my-2 ml-2 text-sm leading-relaxed"
+                  >
+                    {language}
+                  </p>
                 );
               })}
               <span className="rounded-lg bg-teal-300 py-1 px-2 text-sm">
                 実装について
               </span>
-              <p className="my-2 ml-2 text-sm leading-relaxed">{props.dev_description}</p>
+              <p className="my-2 ml-2 text-sm leading-relaxed">
+                {props.dev_description}
+              </p>
               <span className="rounded-lg bg-teal-300 py-1 px-2 text-sm">
                 今後の目標
               </span>
-              <p className="my-2 ml-2 text-sm leading-relaxed">{props.purpose}</p>
+              <p className="my-2 ml-2 text-sm leading-relaxed">
+                {props.purpose}
+              </p>
             </div>
 
             <span onClick={closeModal} className="absolute top-1 right-1">
