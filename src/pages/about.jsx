@@ -50,7 +50,7 @@ export default function About() {
       <Header />
       <Main>
         <>
-          <div className="flex flex-col items-center justify-center lg:px-12">
+          <div className="my-6 flex flex-col items-center justify-center lg:px-12">
             <h1 className="sm:3xl my-8 text-center text-2xl font-medium text-gray-900">
               About me
             </h1>
@@ -92,7 +92,7 @@ export default function About() {
             <Timeline />
 
             <p className="mb-12 text-center text-xl font-medium">
-              エンジニアとしてのスキルUPを目指し<br></br>日々学習中です
+              スキルUPを目指し、日々学習中です
             </p>
           </div>
         </>
