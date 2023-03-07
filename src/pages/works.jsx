@@ -12,10 +12,12 @@ const WorkItems = [
     title: "ポートフォリオサイト",
     img: "img/works_portfolio.png",
     introduction: "今ご覧いただいている、当サイトです",
-    site_description: "",
+    site_description: "自分自身の紹介サイトです。経歴、制作物、スキルについて記載しています。",
+    site_img: "",
     site_url: "https://mukai-junichi.vercel.app/",
     dev_language: ["React", "Next.js", "tailwindcss"],
-    dev_description: "",
+    dev_description: "React学習と並行して自身のポートフォリオサイトを作成しました。Next.jsを使用しており、各ページのルーティングはNext.jsで出しわけを行なっています。Worksページで使用しているモーダルは、Hooksの勉強のためuseStateとuseEffectを使用し自作しました。",
+    purpose: "Hooksについて、CSRやSSR等のレンダリングのタイミングやそれによるSEOの観点での影響等について等、継続して学習を行い、理解を深めていきたいと思っています。",
     modal: true,
   },
   {
@@ -23,10 +25,12 @@ const WorkItems = [
     title: "MJ-Lab",
     img: "img/works_mj-lab.png",
     introduction: "個人運営しているサイトです",
-    site_description: "",
+    site_description: "Web制作、グラフィックデザイン、動画制作、オンライン学習サポート等を個人活動で行なっていきたいと思い制作したサイトです。動画製作以外のページはまだ制作途中です。",
+    site_img: "img/works_mj-lab_all.png",
     site_url: "https://mj-lab.com/",
     dev_language: ["WordPress", "HTML", "CSS(Sass)", "PHP", "Jquery"],
-    dev_description: "",
+    dev_description: "テーマはWordPressで自作しています。PHPは実務経験もあるため比較的楽にと進めることができましたが、WordPressは触ったことがなかったため、仕組みの理解から進めているところです。TOPページは背景に動画を使用し、パララックスにしています。ヘッダーやレスポンシブのハンバーガーメニュー、各コンテンツの動きは、CSSのアニメーションとjQueryを使用して実装しています。",
+    purpose: "Hooksについて、CSRやSSR等のレンダリングのタイミングやそれによるSEOの観点での影響等について等、継続して学習を行い、理解を深めていきたいと思っています。",
     modal: true,
   },
   {
@@ -35,9 +39,11 @@ const WorkItems = [
     img: "img/works_coming-soon.jpg",
     introduction: "適宜、作品制作を行なっていく予定です",
     site_description: "",
+    site_img: "",
     site_url: "",
     dev_language: [],
     dev_description: "",
+    purpose: "",
     modal: false,
   },
 ];
@@ -109,6 +115,12 @@ export default function Works() {
                       title={WorkItem.title}
                       img={WorkItem.img}
                       bool
+                      site_description={WorkItem.site_description}
+                      site_img={WorkItem.site_img}
+                      site_url={WorkItem.site_url}
+                      dev_language={WorkItem.dev_language}
+                      dev_description={WorkItem.dev_description}
+                      purpose={WorkItem.purpose}
                     />
                   </Fragment>
                 );
