@@ -20,7 +20,7 @@ export default function Home() {
       <Header />
       <Main>
         <>
-          <div className="my-12 flex flex-col items-center justify-center md:my-0 md:flex-row">
+          <div className="my-12 flex flex-col items-center justify-center md:flex-row">
             <div className="flex flex-col px-4 md:mr-32 lg:max-w-lg">
               <h1 className="mb-4 text-center text-3xl font-medium text-gray-900 sm:text-5xl">
                 I'm Junichi Mukai
