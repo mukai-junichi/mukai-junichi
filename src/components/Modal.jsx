@@ -26,10 +26,10 @@ const Modal = (props) => {
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className=" rounded bg-white p-3"
+            className="flex w-2/3 flex-col items-center rounded bg-white p-3"
             id="modalContent"
           >
-            <img src={props.img} />
+            <img className="object-cover" src={props.img} />
             <p>{props.title}</p>
             <button onClick={closeModal}>close</button>
           </div>
