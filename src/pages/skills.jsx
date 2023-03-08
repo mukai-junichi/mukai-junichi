@@ -12,13 +12,13 @@ const MySkills = [
         key: Math.floor(Math.random() * 1e3),
         language: "HTML5 / CSS3",
         description:
-          "基本的なコーディングは問題ありません。CSSはSass(scss)での実装も可能です。CSSフレームワークを使わない場合のCSS設計はBEM・FLOCSSをベースにした設計が良いのかなと考えています。CSSフレームワークはtailwindとBootstrapの経験があります。",
+          "基本的なコーディングは問題ありません。CSSはSass(scss)での実装も可能です。CSSフレームワークを使わない場合のCSS設計について、個人開発の際はBEM・FLOCSSをベースにアレンジした設計を行うようにしています。CSSフレームワークはtailwindとBootstrapの経験があります。",
       },
       {
         key: Math.floor(Math.random() * 1e3),
         language: "JavaScript",
         description:
-          "実務では素のJavaScriptとjQueryの経験があります。Reactを自己学習中で、このプロフィールサイトはNext.jsで実装しました。Reactは実装していて楽しかったので、今後も学習を継続して理解を深めていきたいと思っています。「React Hooks」「Next.jsでのCSRやSSR等のレンダリングタイミングとそれによるSEO観点での影響考慮」「Node.jsやExpress」について等を学習し、適宜アプリケーション制作を行いアウトプットしていきたいと思っています。",
+          "実務では素のJavaScriptとjQueryの経験があります。Reactを自己学習中で、このプロフィールサイトはNext.jsで実装しました。React・Next.jsは、「React Hooks」「Next.jsでのCSRやSSR等のレンダリングタイミングとそれによるSEO観点での影響考慮」等を今後も継続して学習し理解を深めていきたいと思っています。また、「Node.js」や「Express」についての理解も深め、JavaScriptでフロントからバックまで全て実装できるスキルを習得したいと思っています。",
       },
     ],
   },
@@ -30,32 +30,31 @@ const MySkills = [
         key: Math.floor(Math.random() * 1e3),
         language: "PHP",
         description:
-          "実務経験があり、一番馴染みのある言語です。フレームワークは実務ではSymfonyを使用していました。またLaravelの自己学習経験があり、アウトプットとしてLaravelでの作品も制作したいと考えています。",
+          "実務経験があり、一番馴染みのある言語です。フレームワークは実務ではSymfonyを使用していました。Laravelは自己学習経験があります。今後、Laravelを使った作品制作したいと考えています。",
       },
       {
         key: Math.floor(Math.random() * 1e3),
         language: "WordPress",
         description:
-          "自己学習を行い、テーマを自作し「MJ-Lab」というサイトを制作しました。（本サイトのWorksページに詳細を記載しています）未完成のページを完成させたら、その後はStripeを使用して決済機能を実装したいと思っています。また、ブログサイトも立ち上げたいと考えていて、ブログ機能についての理解が浅いため学習と並行して習得していきたいと考えています。",
+          "個人開発でテーマを自作し「MJ-Lab」というサイトを制作しました。（本サイトのWorksページに詳細を記載しています）未完成のページを完成させたら、その後はStripeを使用して決済機能を実装したいと思っています。また、ブログサイトも立ち上げたいと考えていて、ブログ機能についての理解が浅いため学習と並行して習得していきたいと考えています。",
       },
       {
         key: Math.floor(Math.random() * 1e3),
         language: "Python",
         description:
-          "分析やスクレイピングに関心があり、自己学習でnumpyを使用した単回帰分析や、Scrapyでの簡単なデータ取得を行った経験があります。特に分析については数学の知識も必要で久々に「極限」についても一緒に学習しましたが、楽しかったのでPythonは今後深く学んでみたい言語と考えています。今すぐはReactやPHP、WordPressについてを学習したいと考えていますので、もし実務でPythonを扱うタイミングがあればそれを機に深く習得したいと思っています。",
+          "分析やスクレイピングをやってみたいと思い、自己学習でnumpyを使用した単回帰分析や、Scrapyでの簡単なデータ取得を行った経験があります。特に分析については数学の知識も必要だったため、久々に「極限」についても一緒に学習し直しました。数学は好きだったことと、学生時代に学んだ数学が実際に活かさるケースを知ったこともあり、とても楽しかったです。もし実務でPythonを扱うタイミングがあれば、それを機に深く習得したいと思っています。",
       },
       {
         key: Math.floor(Math.random() * 1e3),
         language: "Ruby",
         description:
-          "エンジニア転職前に学んだ言語です。Ruby on Railsを用いて初めてアプリケーション開発を行いました。思い入れのある言語で、こちらもPython同様に実務で扱うタイミングがあれば、深く習得していきたいです。",
+          "エンジニア転職に挑戦する際にスクールで学んだ言語です。Ruby on Railsを用いて初めてアプリケーション開発を行いました。思い入れのある言語で、こちらもPython同様に実務で扱うタイミングがあれば、深く習得していきたいです。",
       },
-
       {
         key: Math.floor(Math.random() * 1e3),
         language: "SQL",
         description:
-          "データ取得や検索、テーブルの結合やデータの更新・削除等、基本操作は行えます。データベースはMariaDB、MySQLの使用経験があります。チューニングの経験はありません。ビッグデータの活用や取り扱いも需要の高いスキルかと思っており、実務で学び機会があれば知見を広げたいと思っています。",
+          "データ取得や検索、テーブルの結合やデータの更新・削除等、基本操作は行えます。データベースはMariaDB、MySQLの使用経験があります。チューニングの経験や知見はありません。ビッグデータの活用や取り扱いも需要の高いスキルかと思っており、実務で深く携わる機会があれば知見を広げたいと思っています。",
       },
     ],
   },
@@ -66,12 +65,12 @@ const MySkills = [
       {
         key: Math.floor(Math.random() * 1e3),
         language: "AWS",
-        description: "学習中です。インフラは実務であまり触れる機会も多くなく、今後知識強化が必要な分野と捉えています。",
+        description: "インフラは理解の浅い分野です。AWSは少し経験があり、実務ではAWSのCLIで「S3へのファイルアップロード」「CDNでのキャッシュが残ってしまうためCloudFrontでキャッシュ削除」を行ったことがある程度です。個人開発・学習では、まずはIAM設定から行い、S3でSSL化した静的Webサイトの公開を行ったことがあります。その際はサーバーの必要性がなく費用を重視したかったため、Route53で独自ドメイン取得し、CloudFrontを使用してS3にHTTPSリクエストを送りSSL化して公開しました。AWSはいずれはきちんと学習して知識強化していきたいとは思っている分野です。",
       },
       {
         key: Math.floor(Math.random() * 1e3),
         language: "Docker",
-        description: "ローカルでの開発環境はDockerで構築して行うことができます。AWS等のインフラ側の学習と同時並行で、本番環境もDockerで構築できるようになりたいと思っています。",
+        description: "AWS同様、知識の浅い分野です。ローカルでの開発環境はDockerで構築して行うことができますが、本番環境での運用はまだまだ知見が足りずにできません。インフラに対しての知見強化時にAWSの学習と並行してDockerのスキルも習得していきたいと思っています。",
       },
     ],
   },
@@ -82,7 +81,7 @@ const MySkills = [
       {
         key: Math.floor(Math.random() * 1e3),
         language: "Git (GitHub)",
-        description: "実務での使用経験があります。チーム開発を行なっていますので基本操作は問題なく行えます。",
+        description: "実務でGitHubを使用してのチーム開発を行なっていましたので、開発ブランチの作成、コミット、プッシュ、マージ、コミットの整理、ブランチ切り替え時の一時避難等、基本操作は問題なく行えます。",
       },
       {
         key: Math.floor(Math.random() * 1e3),
@@ -93,6 +92,11 @@ const MySkills = [
         key: Math.floor(Math.random() * 1e3),
         language: "Slack・Teams",
         description: "実務での使用経験があります。基本操作は問題なく行えます。",
+      },
+      {
+        key: Math.floor(Math.random() * 1e3),
+        language: "動画制作",
+        description: "動画を制作しYouTubeで公開しています。制作ツールは主に「Canva」というサービスを使用しています。Canvaではどうしても行えない事がある場合のみ、Adobeの「Premiere Pro」も使用しています。",
       },
     ],
   },
@@ -141,8 +145,8 @@ export default function Skills() {
               </h2>
               {MySkills.map((MySkill) => {
                 return (
-                  <div key={MySkill.key} className="mb-6 w-full">
-                    <div className="my-3 flex flex-row items-center border-b-2 border-teal-600 text-xl text-teal-600">
+                  <div key={MySkill.key} className="mb-12 w-full">
+                    <div className="my-4 flex flex-row items-center border-b-2 border-teal-600 text-xl text-teal-600">
                       {CodeIcon}
                       <h2 className="ml-2">{MySkill.type}</h2>
                     </div>
