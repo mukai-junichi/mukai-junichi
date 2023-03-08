@@ -118,15 +118,8 @@ export default function Works() {
                     <Modal
                       showFlag={showModal}
                       setShowModal={setShowModal}
-                      title={WorkItem.title}
-                      img={WorkItem.img}
                       bool
-                      site_description={WorkItem.site_description}
-                      site_img={WorkItem.site_img}
-                      site_url={WorkItem.site_url}
-                      dev_language={WorkItem.dev_language}
-                      dev_description={WorkItem.dev_description}
-                      purpose={WorkItem.purpose}
+                      {...WorkItem}
                     />
                   </Fragment>
                 );
