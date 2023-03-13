@@ -10,7 +10,7 @@ const MySkills = [
     skills: [
       {
         key: Math.floor(Math.random() * 1e3),
-        language: "HTML5 / CSS3",
+        language: "HTML / CSS",
         description:
           "基本的なコーディングは問題ありません。CSSはSass(scss)での実装も可能です。CSSフレームワークを使わない場合のCSS設計について、個人開発の際はBEM・FLOCSSをベースにアレンジした設計を行うようにしています。CSSフレームワークはtailwindとBootstrapの経験があります。",
       },
