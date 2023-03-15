@@ -32,7 +32,7 @@ const WorkItems = [
       "Web制作、グラフィックデザイン、動画制作、オンライン学習サポート等を個人活動で行なっていきたいと思い制作したサイトです。動画製作以外のページはまだ制作途中です。",
     site_img: "img/works_mj-lab_overall.png",
     site_url: "https://mj-lab.com/",
-    dev_language: ["WordPress", "PHP", "HTML", "CSS(SCSS)", "Jquery"],
+    dev_language: ["WordPress", "PHP", "HTML", "CSS(SCSS)", "jQuery"],
     dev_description:
       "テーマはWordPressで自作しています。WordPressの知見がなかったため、自己学習で仕組み理解から始め制作を進めているところです。TOPページは背景に動画を使用し、パララックスにしています。ヘッダーやレスポンシブのハンバーガーメニュー、各コンテンツの動きは、CSSアニメーションとjQueryを使用して実装しています。",
     purpose:
