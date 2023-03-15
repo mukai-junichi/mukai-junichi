@@ -16,7 +16,7 @@ const WorkItems = [
       "自分自身の紹介サイトです。経歴、制作物、スキルについて記載しています。",
     site_img: "img/works_portfolio_overall.png",
     site_url: "https://mukai-junichi.vercel.app/",
-    dev_language: ["React", "Next.js", "tailwindcss"],
+    dev_language: ["React", "Next.js", "TailwindCSS"],
     dev_description:
       "React学習と並行して自身のポートフォリオサイトを作成しました。Next.jsを使用しており、各ページのルーティングはNext.jsで出しわけを行なっています。Worksページで使用しているモーダルは、Hooksの勉強のためuseStateとuseEffectを使用し自作しました。",
     purpose:
