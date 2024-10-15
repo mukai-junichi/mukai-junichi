@@ -34,7 +34,7 @@ const Histories = [
     key: Math.floor(Math.random() * 1e3),
     age: "30",
     season: "後",
-    title: "茨の道と言われても突き進む、35歳からエンジニアへ転向",
+    title: "35歳からエンジニアへキャリアチェンジし、バックエンドとフロントエンドの開発に取り組む",
     description:
       "家族の理解を得て退職し、短期集中学習型のプログラミングスクールで学習しました。その後、念願のエンジニアとして転職を行い、35歳からエンジニアとしてのキャリアのスタートを切りました。開発は難しいですが奥が深く楽しく、エンジニアに転職して良かったと心から感じました。より開発を行える環境に身を投じたいと思い、務めていた会社では実現が難しかったため、キャリアアップのための転職を行いました。現在はPMとして従事しています。",
   },
@@ -56,7 +56,7 @@ export default function About() {
             </h1>
             <div className="mb-10">
               <h2 className="mb-12 text-center text-xl font-medium">
-                35歳からエンジニアに転向した<br></br>遅咲きエンジニアです
+                35歳からIT業界に転向した<br></br>遅咲きエンジニアです
               </h2>
               <div className="mx-auto flex w-fit flex-col">
                 {Histories.map((History) => {
