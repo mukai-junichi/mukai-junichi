@@ -55,7 +55,6 @@ const Modal = (props) => {
               <p className="my-2 ml-2 text-sm leading-relaxed">
                 {props.site_description}
               </p>
-
               <span className="rounded-lg bg-teal-300 py-1 px-2 text-sm">
                 開発言語
               </span>
@@ -69,18 +68,6 @@ const Modal = (props) => {
                   </p>
                 );
               })}
-              <span className="rounded-lg bg-teal-300 py-1 px-2 text-sm">
-                実装について
-              </span>
-              <p className="my-2 ml-2 text-sm leading-relaxed">
-                {props.dev_description}
-              </p>
-              <span className="rounded-lg bg-teal-300 py-1 px-2 text-sm">
-                今後の目標
-              </span>
-              <p className="my-2 ml-2 text-sm leading-relaxed">
-                {props.purpose}
-              </p>
             </div>
 
             <span onClick={closeModal} className="absolute top-1 right-1">
