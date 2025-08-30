@@ -7,22 +7,21 @@ const skillTableData = [
   {
     category: "言語",
     skills: [
-      { name: "HTML", experience: "2年", level: "業務で使用できる" },
-      { name: "CSS・Sass", experience: "2年", level: "業務で使用できる" },
-      { name: "JavaScript", experience: "2年", level: "業務で使用できる" },
-      { name: "TypeScript", experience: "0.5年", level: "簡単なプログラミングができる" },
+      { name: "HTML", experience: "3年", level: "業務で使用できる" },
+      { name: "CSS・Sass", experience: "3年", level: "業務で使用できる" },
+      { name: "JavaScript", experience: "3年", level: "業務で使用できる" },
+      { name: "TypeScript", experience: "0.5年", level: "業務で使用できる" },
       { name: "PHP", experience: "2年", level: "業務で使用できる" },
-      { name: "Ruby", experience: "0.5年", level: "簡単なプログラミングができる" },
+      { name: "Ruby", experience: "1年", level: "業務で使用できる" },
     ],
   },
   {
     category: "フレームワーク",
     skills: [
       { name: "React", experience: "1年", level: "業務で使用できる" },
-      { name: "Vue.js", experience: "0.5年", level: "簡単なプログラミングができる" },
-      { name: "Laravel", experience: "1年", level: "業務で使用できる" },
-      { name: "Symfony", experience: "1年", level: "簡単なプログラミングができる" },
-      { name: "Ruby on Rails", experience: "0.5年", level: "簡単なプログラミングができる" },
+      { name: "Vue", experience: "0.5年", level: "業務で使用できる" },
+      { name: "Laravel", experience: "1.5年", level: "業務で使用できる" },
+      { name: "Ruby on Rails", experience: "1年", level: "業務で使用できる" },
     ],
   },
   {
