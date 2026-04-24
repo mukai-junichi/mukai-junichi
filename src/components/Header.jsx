@@ -18,10 +18,6 @@ const PAGES = [
     name: "Works",
     url: "/works",
   },
-  {
-    name: "Skills",
-    url: "/skills",
-  },
 ];
 
 const Header = () => {
