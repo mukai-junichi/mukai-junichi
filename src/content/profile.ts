@@ -13,10 +13,7 @@ export const profile = {
   birth: { year: 1985, month: 6, date: 2 },
   location: { ja: "神奈川県 川崎市", en: "Kawasaki, Japan" },
   contact: {
-    email: "",
-    github: "",
-    x: "",
-    linkedin: "",
+    email: "mju.6000@gmail.com",
   },
 } as const;
 

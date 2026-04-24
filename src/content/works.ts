@@ -15,35 +15,49 @@ export type Work = {
 
 export const works: Work[] = [
   {
-    slug: "game-2048",
+    slug: "game-invaders",
     number: "N°01",
+    year: "2026",
+    title: "Invaders",
+    tagline:
+      "canvas × 60fps の要素でスクラッチしたスペースインベーダー。波が進むとテンポが上がる。",
+    kind: "game",
+    stack: ["TypeScript", "Canvas", "Game Loop", "requestAnimationFrame"],
+    summary:
+      "pixel-art スプライト、エイリアン群の左右移動 + 落下、弾道・発射クールダウン、衝突判定、パーティクル爆発、段階的な速度上昇まで全部 canvas で手書き実装。Claude Code と一緒に組み上げた。",
+    builtWith: "Claude Code",
+  },
+  {
+    slug: "game-2048",
+    number: "N°02",
     year: "2026",
     title: "2048",
     tagline: "矢印キーで動かして、同じ数字をぶつけると倍になる、あの 2048。",
     kind: "game",
     stack: ["TypeScript", "React", "Keyboard"],
     summary:
-      "このページ上で直接プレイできる。キー入力 → 盤面の平行シフト → マージ → 新規タイル生成、という古典ゲーム。Claude Code と対話しながら実装した。",
+      "行列のシフト → マージ → 新規タイル生成を React state で実装。独自の teal 寄りカラースケールでリデザイン。",
     builtWith: "Claude Code",
   },
   {
     slug: "game-tic-tac-toe",
-    number: "N°02",
+    number: "N°03",
     year: "2026",
     title: "Tic-Tac-Toe",
-    tagline: "クリックで遊ぶ、2人対戦のマルバツ。勝利判定と引き分け判定つき。",
+    tagline: "クリックで遊ぶマルバツ。勝利ライン判定と勝敗カウントつき。",
     kind: "game",
-    stack: ["TypeScript", "React"],
+    stack: ["TypeScript", "React", "SVG"],
     summary:
-      "3x3 の状態、勝利ラインの全パターン判定、リセット。最小限のコードで完結する気持ちのよい練習題材。",
+      "3x3 状態、8 通りの勝利ライン判定、X/O のカスタム SVG マーク、X 勝/引分/O 勝の累積スコア。",
     builtWith: "Claude Code",
   },
   {
     slug: "portfolio",
-    number: "N°03",
+    number: "N°04",
     year: "2026",
     title: "Portfolio",
-    tagline: "いまご覧のこの個人サイト。Next.js 15 + TypeScript + Tailwind v4 で組み直した。",
+    tagline:
+      "いまご覧のこの個人サイト。Next.js 15 + TypeScript + Tailwind v4 で組み直した。",
     kind: "site",
     stack: ["Next.js 15", "React 19", "TypeScript", "Tailwind CSS v4", "Motion"],
     url: "https://mukai-junichi.vercel.app/",
@@ -53,17 +67,20 @@ export const works: Work[] = [
   },
   {
     slug: "mj-lab",
-    number: "N°04",
+    number: "N°05",
     year: "2023",
     title: "MJ-Lab",
-    tagline: "「AIとクリエイティブで、ビジネスを、もっと面白く」― 個人で運営しているスタジオサイト。",
+    tagline:
+      "「AIとクリエイティブで、ビジネスを、もっと面白く」― 個人で運営しているスタジオサイト。",
     kind: "site",
     stack: ["WordPress", "PHP", "SCSS", "jQuery"],
     url: "https://mj-lab.com/",
     summary:
-      "Web 制作・動画制作・AI 活用研修・AI コンサルを展開。WordPress のテーマを一から自作して運用している。時代に合わせてサービス領域を拡張中。",
+      "Web 制作・動画制作・AI 活用研修・AI コンサルを展開。WordPress のテーマを一から自作して運用している。",
   },
 ];
+
+export const games = works.filter((w) => w.kind === "game");
 
 export function findWork(slug: string) {
   return works.find((w) => w.slug === slug);

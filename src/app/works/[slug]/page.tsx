@@ -7,6 +7,7 @@ import Pill from "@/components/ui/Pill";
 import Button from "@/components/ui/Button";
 import Game2048 from "@/components/games/Game2048";
 import TicTacToe from "@/components/games/TicTacToe";
+import Invaders from "@/components/games/Invaders";
 import { findWork, works } from "@/content/works";
 
 export function generateStaticParams() {
@@ -25,6 +26,7 @@ export async function generateMetadata({
 }
 
 function GameForSlug({ slug }: { slug: string }) {
+  if (slug === "game-invaders") return <Invaders />;
   if (slug === "game-2048") return <Game2048 />;
   if (slug === "game-tic-tac-toe") return <TicTacToe />;
   return null;
@@ -77,7 +79,7 @@ export default async function WorkDetailPage({
         </section>
 
         {work.kind === "game" && (
-          <section className="mt-12 rounded-2xl border border-[var(--color-border)] bg-white p-6 md:p-10">
+          <section className="mt-12">
             <GameForSlug slug={work.slug} />
           </section>
         )}
