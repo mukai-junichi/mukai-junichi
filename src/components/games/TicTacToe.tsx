@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { cn } from "@/lib/cn";
+import HudStat from "./HudStat";
 
 type Cell = "X" | "O" | null;
 
@@ -93,9 +94,9 @@ export default function TicTacToe() {
           <span className="font-[family-name:var(--font-geist-mono)] text-lg font-bold">Tic-Tac-Toe</span>
         </div>
         <div className="flex items-center gap-2">
-          <StatBox label="X" value={winsX} tone="light" />
-          <StatBox label="—" value={draws} tone="muted" />
-          <StatBox label="O" value={winsO} tone="accent" />
+          <HudStat label="X" value={winsX} tone="light" className="min-w-[44px]" />
+          <HudStat label="—" value={draws} tone="muted" className="min-w-[44px]" />
+          <HudStat label="O" value={winsO} tone="accent" className="min-w-[44px]" />
           <button
             onClick={resetAll}
             aria-label="Reset all"
@@ -165,7 +166,7 @@ export default function TicTacToe() {
                         cell === "X" ? "text-[var(--color-ink)]" : "text-[var(--color-accent-deep)]",
                       )}
                       style={{
-                        animation: "mark-in 0.22s cubic-bezier(0.2, 0.7, 0.2, 1) both",
+                        animation: "pop-in 0.22s cubic-bezier(0.2, 0.7, 0.2, 1) both",
                       }}
                     >
                       {cell === "X" ? <XMark /> : <OMark />}
@@ -178,39 +179,10 @@ export default function TicTacToe() {
         </div>
       </div>
 
-      <footer className="flex flex-wrap items-center justify-between gap-3 border-t border-[var(--color-border)] bg-[var(--color-bg-subtle)] px-5 py-3 text-[0.72rem] text-[var(--color-ink-subtle)] md:px-7">
-        <span className="font-[family-name:var(--font-geist-mono)]">
-          Click a cell · First to 3 in a row
-        </span>
-        <span className="font-[family-name:var(--font-geist-mono)]">
-          Built with <span className="text-[var(--color-accent-deep)]">Claude Code</span>
-        </span>
+      <footer className="border-t border-[var(--color-border)] bg-[var(--color-bg-subtle)] px-5 py-3 font-[family-name:var(--font-geist-mono)] text-[0.72rem] text-[var(--color-ink-subtle)] md:px-7">
+        Click a cell · First to 3 in a row
       </footer>
 
-      <style>{`
-        @keyframes mark-in {
-          0% { transform: scale(0.55); opacity: 0; }
-          100% { transform: scale(1); opacity: 1; }
-        }
-      `}</style>
-    </div>
-  );
-}
-
-function StatBox({ label, value, tone }: { label: string; value: number; tone: "light" | "muted" | "accent" }) {
-  const tones = {
-    light: "text-white",
-    muted: "text-white/60",
-    accent: "text-[#5EEAD4]",
-  };
-  return (
-    <div className="flex min-w-[44px] flex-col items-center rounded-md bg-white/10 px-2 py-1">
-      <span className={cn("font-[family-name:var(--font-geist-mono)] text-[0.58rem] tracking-[0.18em]", tones[tone])}>
-        {label}
-      </span>
-      <span className="font-[family-name:var(--font-geist-mono)] text-sm font-bold tabular-nums text-white">
-        {value}
-      </span>
     </div>
   );
 }

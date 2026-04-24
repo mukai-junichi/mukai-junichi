@@ -6,30 +6,25 @@ import ArcadeTabs from "./ArcadeTabs";
 export const metadata: Metadata = {
   title: "Games",
   description:
-    "向井純一が Claude Code と一緒に作ったブラウザゲーム集。インベーダー、2048、Tic-Tac-Toe がこのページ上で遊べる。",
+    "向井純一が手を動かして作ったブラウザゲーム集。インベーダー、2048、Tic-Tac-Toe がこのページ上で遊べる。",
 };
 
 export default function GamesPage() {
   return (
     <>
       <Header />
-      <main className="page-in mx-auto max-w-5xl px-6 py-14 md:py-20">
-        <section>
-          <p className="font-[family-name:var(--font-geist-mono)] text-[0.72rem] tracking-[0.18em] uppercase text-[var(--color-ink-subtle)]">
-            Games · Arcade
-          </p>
-          <h1 className="mt-3 text-4xl leading-tight font-semibold tracking-[-0.025em] md:text-5xl">
-            ブラウザで遊べる、
-            <br className="md:hidden" />
-            小さな<span className="text-[var(--color-accent)]">アーケード</span>。
+      <main className="mx-auto w-full max-w-5xl flex-1 px-6 py-16 md:py-24">
+        <section className="rise-in">
+          <h1 className="text-5xl leading-[0.95] font-semibold tracking-[-0.03em] md:text-6xl">
+            Games<span className="text-[var(--color-accent)]">.</span>
           </h1>
-          <p className="mt-5 max-w-[52ch] font-[family-name:var(--font-noto-jp)] text-[0.98rem] leading-[1.9] text-[var(--color-ink-muted)]">
-            Claude Code と一緒に作った実装デモを、そのままこのページで遊べるように置いています。
-            タブで切り替えてどうぞ。
+          <p className="mt-6 max-w-[52ch] font-[family-name:var(--font-noto-jp)] text-[0.98rem] leading-[1.95] text-[var(--color-ink-muted)]">
+            手を動かして作った実装デモを、そのままこのページで遊べるように
+            置いています。タブで切り替えてどうぞ。
           </p>
         </section>
 
-        <section className="mt-12">
+        <section className="mt-12 rise-in md:mt-14" style={{ animationDelay: "120ms" }}>
           <ArcadeTabs />
         </section>
       </main>

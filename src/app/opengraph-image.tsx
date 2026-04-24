@@ -91,7 +91,7 @@ export default function OpengraphImage() {
             textTransform: "uppercase",
           }}
         >
-          <span>Made with Claude Code</span>
+          <span>Engineer · Product · Business</span>
           <span>mukai-junichi.vercel.app</span>
         </div>
       </div>

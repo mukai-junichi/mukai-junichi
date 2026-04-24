@@ -1,17 +1,19 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #ffffff;
-  --color-bg-subtle: #f9fafb;
-  --color-ink: #111827;
+  --color-bg: #fdfcfa;
+  --color-bg-subtle: #f6f5f1;
+  --color-bg-panel: #ffffff;
+  --color-ink: #0b0f19;
   --color-ink-muted: #4b5563;
-  --color-ink-subtle: #6b7280;
-  --color-border: #e5e7eb;
-  --color-border-strong: #d1d5db;
+  --color-ink-subtle: #8b8f99;
+  --color-border: #e7e5df;
+  --color-border-strong: #c8c5bc;
 
   --color-accent: #0d9488;
   --color-accent-deep: #0f766e;
   --color-accent-soft: #ccfbf1;
+  --color-accent-subtle: #e6fffb;
 
   --font-sans: var(--font-geist);
   --font-mono: var(--font-geist-mono);
@@ -19,8 +21,8 @@
 }
 
 html {
-  background: var(--color-bg);
   color: var(--color-ink);
+  background-color: var(--color-bg);
 }
 
 body {
@@ -28,6 +30,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  font-feature-settings: "kern", "liga", "cv11", "ss01";
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(11, 15, 25, 0.06) 1px, transparent 0);
+  background-size: 28px 28px;
+  background-attachment: fixed;
 }
 
 ::selection {
@@ -35,10 +42,11 @@ body {
   color: #fff;
 }
 
-@keyframes page-in {
+/* Page-load stagger rise-in */
+@keyframes rise-in {
   from {
     opacity: 0;
-    transform: translateY(4px);
+    transform: translateY(6px);
   }
   to {
     opacity: 1;
@@ -46,6 +54,25 @@ body {
   }
 }
 
-.page-in {
-  animation: page-in 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+.rise-in {
+  animation: rise-in 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+/* Score +N pop-up used in game HUDs */
+@keyframes score-pop {
+  0% { opacity: 0; transform: translateY(0); }
+  20% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-14px); }
+}
+
+/* Small scale-in used for game tiles and marks appearing */
+@keyframes pop-in {
+  from { transform: scale(0.55); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Tabular numerals for aligned number columns */
+.num-tabular {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" on, "cv11" on;
 }

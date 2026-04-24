@@ -2,6 +2,8 @@
 
 import { useCallback, useEffect, useState } from "react";
 import { cn } from "@/lib/cn";
+import HudStat from "./HudStat";
+import KeyCap from "./KeyCap";
 
 type Board = number[][];
 type Direction = "left" | "right" | "up" | "down";
@@ -181,8 +183,8 @@ export default function Game2048() {
           </span>
         </div>
         <div className="flex items-stretch gap-2">
-          <ScoreBox label="SCORE" value={score} gain={lastGain} />
-          <ScoreBox label="BEST" value={best} />
+          <HudStat label="SCORE" value={score} gain={lastGain} className="min-w-[68px]" />
+          <HudStat label="BEST" value={best} className="min-w-[68px]" />
           <button
             onClick={reset}
             aria-label="New game"
@@ -213,7 +215,7 @@ export default function Game2048() {
                   style={
                     v !== 0
                       ? {
-                          animation: "tile-in 0.18s cubic-bezier(0.2, 0.7, 0.2, 1) both",
+                          animation: "pop-in 0.18s cubic-bezier(0.2, 0.7, 0.2, 1) both",
                         }
                       : undefined
                   }
@@ -246,66 +248,18 @@ export default function Game2048() {
         </div>
       </div>
 
-      <footer className="flex flex-wrap items-center justify-between gap-3 border-t border-[var(--color-border)] bg-[var(--color-bg-subtle)] px-5 py-3 text-[0.72rem] text-[var(--color-ink-subtle)] md:px-7">
-        <div className="flex items-center gap-2 font-[family-name:var(--font-geist-mono)]">
-          <KeyCap>←</KeyCap>
-          <KeyCap>↑</KeyCap>
-          <KeyCap>↓</KeyCap>
-          <KeyCap>→</KeyCap>
-          <span className="ml-1 text-[var(--color-ink-subtle)]">or</span>
-          <KeyCap>H</KeyCap>
-          <KeyCap>J</KeyCap>
-          <KeyCap>K</KeyCap>
-          <KeyCap>L</KeyCap>
-        </div>
-        <span className="font-[family-name:var(--font-geist-mono)]">
-          Built with <span className="text-[var(--color-accent-deep)]">Claude Code</span>
-        </span>
+      <footer className="flex flex-wrap items-center gap-2 border-t border-[var(--color-border)] bg-[var(--color-bg-subtle)] px-5 py-3 font-[family-name:var(--font-geist-mono)] text-[0.72rem] text-[var(--color-ink-subtle)] md:px-7">
+        <KeyCap>←</KeyCap>
+        <KeyCap>↑</KeyCap>
+        <KeyCap>↓</KeyCap>
+        <KeyCap>→</KeyCap>
+        <span className="ml-1 text-[var(--color-ink-subtle)]">or</span>
+        <KeyCap>H</KeyCap>
+        <KeyCap>J</KeyCap>
+        <KeyCap>K</KeyCap>
+        <KeyCap>L</KeyCap>
       </footer>
 
-      <style>{`
-        @keyframes tile-in {
-          0% { transform: scale(0.55); opacity: 0; }
-          100% { transform: scale(1); opacity: 1; }
-        }
-      `}</style>
     </div>
-  );
-}
-
-function ScoreBox({ label, value, gain }: { label: string; value: number; gain?: number }) {
-  return (
-    <div className="relative flex min-w-[68px] flex-col items-center justify-center rounded-md bg-white/10 px-3 py-1.5">
-      <div className="font-[family-name:var(--font-geist-mono)] text-[0.58rem] tracking-[0.2em] text-[#5EEAD4]/70">
-        {label}
-      </div>
-      <div className="font-[family-name:var(--font-geist-mono)] text-base font-bold tabular-nums">
-        {value}
-      </div>
-      {gain && gain > 0 ? (
-        <span
-          key={gain + Math.random()}
-          className="absolute -top-1 right-0 font-[family-name:var(--font-geist-mono)] text-[0.7rem] font-bold text-[#5EEAD4]"
-          style={{ animation: "score-pop 0.7s ease-out both" }}
-        >
-          +{gain}
-        </span>
-      ) : null}
-      <style>{`
-        @keyframes score-pop {
-          0% { opacity: 0; transform: translateY(0); }
-          20% { opacity: 1; }
-          100% { opacity: 0; transform: translateY(-14px); }
-        }
-      `}</style>
-    </div>
-  );
-}
-
-function KeyCap({ children }: { children: React.ReactNode }) {
-  return (
-    <kbd className="inline-flex h-6 min-w-6 items-center justify-center rounded border border-[var(--color-border)] bg-white px-1.5 font-[family-name:var(--font-geist-mono)] text-[0.68rem] font-medium text-[var(--color-ink-muted)] shadow-[0_1px_0_rgba(0,0,0,0.05)]">
-      {children}
-    </kbd>
   );
 }

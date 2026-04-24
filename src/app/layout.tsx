@@ -39,7 +39,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja" className={fontVariables}>
-      <body>{children}</body>
+      <body className="flex min-h-screen flex-col">{children}</body>
     </html>
   );
 }

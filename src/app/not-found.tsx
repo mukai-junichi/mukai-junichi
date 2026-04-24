@@ -6,7 +6,7 @@ export default function NotFound() {
   return (
     <>
       <Header />
-      <main className="mx-auto flex min-h-[60vh] max-w-3xl flex-col items-start justify-center px-6 py-14">
+      <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col items-start justify-center px-6 py-14">
         <p className="font-[family-name:var(--font-geist-mono)] text-[0.72rem] tracking-[0.2em] uppercase text-[var(--color-accent-deep)]">
           404
         </p>

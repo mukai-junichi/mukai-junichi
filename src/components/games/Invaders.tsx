@@ -1,6 +1,8 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import HudStat from "./HudStat";
+import KeyCap from "./KeyCap";
 
 // === Internal constants ===
 const GAME_W = 640;
@@ -498,11 +500,6 @@ export default function Invaders() {
 
         ctx.fillStyle = "#FAFAFA";
         ctx.font = "bold 44px 'Geist', ui-sans-serif, sans-serif";
-        const big = s.status === "won"
-          ? `+${s.score - (s.wave === 1 ? 0 : s.score)}`
-          : s.status === "lost"
-            ? `${s.score} pts`
-            : "READY";
         ctx.fillText(
           s.status === "idle" ? "READY" : s.status === "won" ? `SCORE ${s.score}` : `${s.score} POINTS`,
           GAME_W / 2,
@@ -544,9 +541,9 @@ export default function Invaders() {
           </span>
         </div>
         <div className="flex flex-wrap items-stretch gap-2">
-          <HudBox label="SCORE" value={score} />
-          <HudBox label="LIVES" value={lives} accent />
-          <HudBox label="WAVE" value={wave} />
+          <HudStat label="SCORE" value={score} className="min-w-[64px]" />
+          <HudStat label="LIVES" value={lives} tone="warn" className="min-w-[64px]" />
+          <HudStat label="WAVE" value={wave} className="min-w-[64px]" />
           <button
             onClick={startGame}
             aria-label="Restart"
@@ -591,44 +588,15 @@ export default function Invaders() {
         )}
       </div>
 
-      <footer className="flex flex-wrap items-center justify-between gap-3 border-t border-[var(--color-border)] bg-[var(--color-bg-subtle)] px-5 py-3 text-[0.72rem] text-[var(--color-ink-subtle)] md:px-7">
-        <div className="flex items-center gap-2 font-[family-name:var(--font-geist-mono)]">
-          <KeyCap>←</KeyCap>
-          <KeyCap>→</KeyCap>
-          <span className="ml-0.5">Move</span>
-          <span className="mx-2 text-[var(--color-ink-subtle)]/50">·</span>
-          <KeyCap wide>Space</KeyCap>
-          <span>Fire</span>
-        </div>
-        <span className="font-[family-name:var(--font-geist-mono)]">
-          Built with <span className="text-[var(--color-accent-deep)]">Claude Code</span>
-        </span>
+      <footer className="flex flex-wrap items-center gap-2 border-t border-[var(--color-border)] bg-[var(--color-bg-subtle)] px-5 py-3 font-[family-name:var(--font-geist-mono)] text-[0.72rem] text-[var(--color-ink-subtle)] md:px-7">
+        <KeyCap>←</KeyCap>
+        <KeyCap>→</KeyCap>
+        <span className="ml-0.5">Move</span>
+        <span className="mx-2 text-[var(--color-ink-subtle)]/50">·</span>
+        <KeyCap wide>Space</KeyCap>
+        <span>Fire</span>
       </footer>
     </div>
   );
 }
 
-function HudBox({ label, value, accent }: { label: string; value: number; accent?: boolean }) {
-  return (
-    <div className="flex min-w-[64px] flex-col items-center justify-center rounded-md bg-white/10 px-3 py-1.5">
-      <span
-        className={`font-[family-name:var(--font-geist-mono)] text-[0.58rem] tracking-[0.2em] ${accent ? "text-[#FB7185]/80" : "text-[#5EEAD4]/70"}`}
-      >
-        {label}
-      </span>
-      <span className="font-[family-name:var(--font-geist-mono)] text-base font-bold tabular-nums text-white">
-        {value}
-      </span>
-    </div>
-  );
-}
-
-function KeyCap({ children, wide }: { children: React.ReactNode; wide?: boolean }) {
-  return (
-    <kbd
-      className={`inline-flex h-6 items-center justify-center rounded border border-[var(--color-border)] bg-white px-1.5 font-[family-name:var(--font-geist-mono)] text-[0.68rem] font-medium text-[var(--color-ink-muted)] shadow-[0_1px_0_rgba(0,0,0,0.05)] ${wide ? "min-w-14" : "min-w-6"}`}
-    >
-      {children}
-    </kbd>
-  );
-}
