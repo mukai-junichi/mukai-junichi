@@ -25,7 +25,8 @@ next-env.d.ts
 
 # editor / tooling
 .vscode/
-.claude/
+.claude/*
+!.claude/memory/
 
 # debug
 npm-debug.log*
